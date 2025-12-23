@@ -1,0 +1,17 @@
+/* 浅咖色主题按键样式 */
+.key-light-coffee {
+  .key();
+  background: linear-gradient(145deg, @light-coffee-light, @light-coffee-dark);
+  border: 1px solid @light-coffee-border;
+  font-weight: 600;
+  color: @white;
+  
+  &:hover {
+    background: linear-gradient(145deg, lighten(@light-coffee-light, 5%), lighten(@light-coffee-dark, 5%));
+    border-color: lighten(@light-coffee-border, 10%);
+  }
+  
+  &.selected {
+    box-shadow: 0 0 0 2px fade(@light-coffee-border, 50%);
+  }
+}

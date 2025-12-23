@@ -1,0 +1,55 @@
+/* 导入全局颜色常量 */
+@import '../../styles/global.less';
+
+/* 导入主题样式 */
+@import '../../styles/themes/blue/panel.less';
+@import '../../styles/themes/green/panel.less';
+@import '../../styles/themes/red/panel.less';
+@import '../../styles/themes/orange/panel.less';
+@import '../../styles/themes/purple/panel.less';
+@import '../../styles/themes/navy/panel.less';
+@import '../../styles/themes/sky/panel.less';
+@import '../../styles/themes/matcha/panel.less';
+@import '../../styles/themes/light-matcha/panel.less';
+@import '../../styles/themes/sakura/panel.less';
+@import '../../styles/themes/champagne/panel.less';
+@import '../../styles/themes/lavender/panel.less';
+@import '../../styles/themes/obsidian/panel.less';
+@import '../../styles/themes/deep-coffee/panel.less';
+@import '../../styles/themes/light-coffee/panel.less';
+@import '../../styles/themes/milk-white/panel.less';
+
+/* KeyboardArea 组件样式 */
+
+/* 键盘主体 */
+.keyboard {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  border-style: solid;
+  border-width: 3px;
+  border-color: @default-border;
+  border-radius: 12px;
+  margin: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  width: fit-content;
+  min-height: auto;
+  height: fit-content;
+  margin: 0 auto;
+}
+
+/* 键盘右侧区域 */
+.keyboard-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 配色方案 - 可通过 CSS 变量或类名进行定制 */
+:root {
+  /* 默认配色 */
+  --key-bg: #f0f0f0;
+  --key-border: #d0d0d0;
+  --key-text: #333;
+}

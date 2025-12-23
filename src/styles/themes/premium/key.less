@@ -1,0 +1,148 @@
+/* 高级质感主题按键样式 - 立方体视图效果 */
+.key-premium {
+  .key();
+  background: linear-gradient(145deg, @premium-light, @premium-dark);
+  border: 2px solid @premium-border;
+  border-radius: 8px;
+  font-weight: 600;
+  color: @navy-light;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+
+  /* 凸起效果 - 強烈的外陰影和內光暈 */
+  box-shadow: inset 0 0 0 2px lighten(@premium-dark, 5%),
+    inset 0 0 0 4px @premium-dark, 0 6px 12px rgba(0, 0, 0, 0.25),
+    0 4px 8px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+  /* 四边棱角清晰效果 */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    border: 1px solid darken(@premium-border, 10%);
+    border-radius: 6px;
+    background: linear-gradient(
+      145deg,
+      lighten(@premium-dark, 8%),
+      @premium-dark
+    );
+    pointer-events: none;
+    z-index: 1;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  /* 内层小正方形 */
+  &::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    border: 1px solid darken(@premium-dark, 5%);
+    border-radius: 4px;
+    background: linear-gradient(
+      145deg,
+      @premium-light,
+      lighten(@premium-dark, 5%)
+    );
+    pointer-events: none;
+    z-index: 1;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+  }
+
+  &:hover {
+    background: linear-gradient(
+      145deg,
+      lighten(@premium-dark, 5%),
+      darken(@premium-dark, 5%)
+    );
+    border-color: darken(@premium-border, 5%);
+    /* 更強的凸起效果 - 陰影更深，光暈更亮 */
+    box-shadow: inset 0 0 0 2px @premium-light,
+      inset 0 0 0 4px lighten(@premium-dark, 5%), 0 8px 16px rgba(0, 0, 0, 0.3),
+      0 6px 12px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.15),
+      inset 0 2px 0 rgba(255, 255, 255, 0.95);
+    transform: translateY(-2px) scale(1.03);
+
+    &::before {
+      border-color: darken(@premium-border, 15%);
+      background: linear-gradient(
+        145deg,
+        @premium-light,
+        lighten(@premium-dark, 3%)
+      );
+      box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.95),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+    }
+
+    &::after {
+      border-color: darken(@premium-dark, 8%);
+      background: linear-gradient(
+        145deg,
+        @premium-light,
+        lighten(@premium-dark, 8%)
+      );
+      box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.9);
+    }
+  }
+
+  &:active {
+    background: linear-gradient(
+      145deg,
+      @premium-dark,
+      darken(@premium-dark, 10%)
+    );
+    border-color: darken(@premium-border, 15%);
+    /* 凹陷效果 - 陰影內陷，模擬按下狀態 */
+    box-shadow: inset 0 0 0 2px darken(@premium-dark, 5%),
+      inset 0 0 0 4px darken(@premium-dark, 10%),
+      inset 0 4px 8px rgba(0, 0, 0, 0.15), inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(2px) scale(0.97);
+
+    &::before {
+      border-color: darken(@premium-border, 20%);
+      background: linear-gradient(
+        145deg,
+        lighten(@premium-dark, 5%),
+        @premium-dark
+      );
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    &::after {
+      border-color: darken(@premium-dark, 12%);
+      background: linear-gradient(
+        145deg,
+        lighten(@premium-dark, 3%),
+        @premium-dark
+      );
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  .key-label,
+  .key-label-small {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* 选中状态 */
+  &.selected {
+    background: linear-gradient(
+      145deg,
+      lighten(@premium-dark, 5%),
+      @premium-dark
+    );
+    border-color: darken(@premium-border, 10%);
+    box-shadow: inset 0 0 0 2px @premium-light,
+      inset 0 0 0 4px lighten(@premium-dark, 5%), 0 8px 16px rgba(0, 0, 0, 0.3),
+      0 6px 12px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.15),
+      inset 0 2px 0 rgba(255, 255, 255, 0.95);
+  }
+}

@@ -1,0 +1,85 @@
+/* 导入全局颜色常量 */
+@import '../../styles/global.less';
+.key-container {
+  position: absolute;
+}
+
+/* 公共基础样式 */
+.key {
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  width: calc(100% - var(--key-padding, 1px) * 2);
+  height: calc(100% - var(--key-padding, 1px) * 2);
+  margin: var(--key-padding, 1px);
+  /* 使用flex布局居中内容 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 1px;
+
+  .key-label {
+    text-align: center;
+    user-select: none;
+    font-size: 14px;
+  }
+  
+  /* 小字体样式 */
+  .key-label-small {
+    text-align: center;
+    user-select: none;
+    font-size: 10px;
+  }
+
+  /* 选中指示器，与Knob组件保持一致 */
+  .selected-indicator {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 20px;
+    height: 20px;
+    background-color: #2196f3;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* 全局选中状态样式，与Knob组件保持一致 */
+[class^="key-"] {
+  &.selected {
+    background: inherit !important;
+    border-color: inherit !important;
+    box-shadow: inherit !important;
+    outline: 2px solid #2196f3 !important;
+    outline-offset: 2px !important;
+  }
+}
+
+/* 导入所有主题样式 */
+@import '../../styles/themes/default/key.less';
+@import '../../styles/themes/premium/key.less';
+@import '../../styles/themes/metal/key.less';
+@import '../../styles/themes/blue/key.less';
+@import '../../styles/themes/green/key.less';
+@import '../../styles/themes/red/key.less';
+@import '../../styles/themes/orange/key.less';
+@import '../../styles/themes/purple/key.less';
+@import '../../styles/themes/navy/key.less';
+@import '../../styles/themes/sky/key.less';
+@import '../../styles/themes/matcha/key.less';
+@import '../../styles/themes/light-matcha/key.less';
+@import '../../styles/themes/sakura/key.less';
+@import '../../styles/themes/champagne/key.less';
+@import '../../styles/themes/lavender/key.less';
+@import '../../styles/themes/obsidian/key.less';
+@import '../../styles/themes/deep-coffee/key.less';
+@import '../../styles/themes/light-coffee/key.less';
+@import '../../styles/themes/milk-white/key.less';

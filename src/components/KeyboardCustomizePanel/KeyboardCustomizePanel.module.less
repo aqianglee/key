@@ -1,0 +1,290 @@
+/* 导入全局颜色常量 */
+@import '../../styles/global.less';
+
+/* KeyboardControlPanel 组件样式 */
+
+/* 控制面板样式已迁移到 ControlPanelContainer 组件 */
+/*
+.control-panel {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  overflow-y: auto;
+}
+*/
+
+/* 键盘属性网格 */
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.property-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  border: 1px solid #eaeaea;
+}
+
+.property-label {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.property-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* 质感切换按钮样式 */
+.key-type-selector {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2d3748;
+    margin-right: 8px;
+  }
+}
+
+.type-btn {
+  padding: 6px 12px;
+  border: 2px solid #4a5568;
+  border-radius: 4px;
+  background-color: #f7fafc;
+  color: #2d3748;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 80px;
+  text-align: center;
+
+  &:hover {
+    background-color: #e2e8f0;
+    border-color: #2d3748;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  &.active {
+    background-color: #4a5568;
+    color: #ffffff;
+    border-color: #2d3748;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* 颜色按钮样式 */
+.color-btn {
+  padding: 6px 12px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  min-width: 50px;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  &.active {
+    border-color: white;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+    transform: translateY(-1px);
+  }
+}
+
+/* 各颜色按钮的具体样式 */
+.blue {
+  background: linear-gradient(145deg, @blue-light, @blue-dark);
+  border-color: @blue-border;
+}
+
+.green {
+  background: linear-gradient(145deg, @green-light, @green-dark);
+  border-color: @green-border;
+}
+
+.red {
+  background: linear-gradient(145deg, @red-light, @red-dark);
+  border-color: @red-border;
+}
+
+.orange {
+  background: linear-gradient(145deg, @orange-light, @orange-dark);
+  border-color: @orange-border;
+}
+
+.purple {
+  background: linear-gradient(145deg, @purple-light, @purple-dark);
+  border-color: @purple-border;
+}
+
+.navy {
+  background: linear-gradient(145deg, @navy-light, @navy-dark);
+  border-color: @navy-border;
+}
+
+.sky {
+  background: linear-gradient(145deg, @sky-light, @sky-dark);
+  border-color: @sky-border;
+}
+
+.matcha {
+  background: linear-gradient(145deg, @matcha-light, @matcha-dark);
+  border-color: @matcha-border;
+}
+
+.sakura {
+  background: linear-gradient(145deg, @sakura-light, @sakura-dark);
+  border-color: @sakura-border;
+}
+
+.champagne {
+  background: linear-gradient(145deg, @champagne-light, @champagne-dark);
+  border-color: @champagne-border;
+}
+
+.lavender {
+  background: linear-gradient(145deg, @lavender-light, @lavender-dark);
+  border-color: @lavender-border;
+}
+
+.obsidian {
+  background: linear-gradient(145deg, @obsidian-light, @obsidian-dark);
+  border-color: @obsidian-border;
+}
+
+/* 选中键管理区域 */
+.selection-management {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 300px;
+  
+  h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+  }
+}
+
+.selection-info {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  color: #666;
+  
+  div {
+    padding: 4px 8px;
+    background: #f0f0f0;
+    border-radius: 4px;
+  }
+}
+
+.selection-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* 颜色选择器样式 */
+.color-selector,
+.border-color-selector,
+.background-color-selector {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.action-btn {
+  padding: 6px 12px;
+  background: @red-light;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover:not(:disabled) {
+    background: @red-dark;
+    transform: translateY(-1px);
+  }
+
+  &:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+}
+
+.color-assignment {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 10px;
+  
+  span {
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+  }
+}
+
+.color-assign-btn {
+  padding: 6px 12px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  min-width: 50px;
+
+  &:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

@@ -1,0 +1,96 @@
+/* 导入全局颜色常量 */
+@import '../../styles/global.less';
+
+/* 旋钮容器样式 */
+.knob-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* 基础旋钮样式 */
+.knob {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+/* 默认旋钮样式 */
+.knob-default {
+  .knob();
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  border: 1px solid #b0b0b0;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+/* 旋钮被选中时的样式 */
+.selected {
+  outline: 2px solid #2196f3;
+  outline-offset: 2px;
+}
+
+/* 选中指示器 */
+.selected-indicator {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 20px;
+  height: 20px;
+  background-color: #2196f3;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 旋钮标签样式 */
+.knob-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: inherit;
+  text-align: center;
+  pointer-events: none;
+}
+
+.knob-label-small {
+  font-size: 10px;
+}
+
+/* 为主题样式定义旋钮的混合类 */
+.key {
+  .knob();
+}
+
+/* 导入主题样式 */
+@import '../../styles/themes/premium/key.less';
+@import '../../styles/themes/metal/key.less';
+@import '../../styles/themes/blue/key.less';
+@import '../../styles/themes/green/key.less';
+@import '../../styles/themes/red/key.less';
+@import '../../styles/themes/orange/key.less';
+@import '../../styles/themes/purple/key.less';
+@import '../../styles/themes/navy/key.less';
+@import '../../styles/themes/sky/key.less';
+@import '../../styles/themes/matcha/key.less';
+@import '../../styles/themes/light-matcha/key.less';
+@import '../../styles/themes/sakura/key.less';
+@import '../../styles/themes/champagne/key.less';
+@import '../../styles/themes/lavender/key.less';
+@import '../../styles/themes/obsidian/key.less';
+@import '../../styles/themes/deep-coffee/key.less';
+@import '../../styles/themes/light-coffee/key.less';
+@import '../../styles/themes/milk-white/key.less';

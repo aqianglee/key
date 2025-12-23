@@ -1,0 +1,40 @@
+/* 红色主题按键样式 */
+.key-red {
+  .key();
+  background: linear-gradient(145deg, @red-light, @red-dark);
+  border: 1px solid @red-border;
+  font-weight: 600;
+  color: @white;
+  box-shadow: 
+    0 3px 6px rgba(0, 0, 0, 0.2),
+    0 1px 3px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+
+  &:hover {
+    background: linear-gradient(145deg, lighten(@red-light, 10%), lighten(@red-dark, 10%));
+    box-shadow: 
+      0 4px 8px rgba(0, 0, 0, 0.25),
+      0 2px 4px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    background: linear-gradient(145deg, darken(@red-light, 10%), darken(@red-dark, 10%));
+    box-shadow: 
+      inset 0 2px 4px rgba(0, 0, 0, 0.3),
+      inset 0 1px 2px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px);
+  }
+
+  /* 选中状态 */
+  &.selected {
+    background: linear-gradient(145deg, lighten(@red-light, 15%), lighten(@red-dark, 15%));
+    border-color: lighten(@red-border, 10%);
+    box-shadow: 
+      0 4px 8px rgba(0, 0, 0, 0.3),
+      0 2px 4px rgba(0, 0, 0, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+}

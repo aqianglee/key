@@ -1,0 +1,87 @@
+/* 导入导出组件样式 */
+
+/* 容器样式 */
+.import-export-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+/* 行样式 */
+.row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* 输入组样式 */
+.input-group {
+  flex: 1;
+  min-width: 0;
+}
+
+/* 按钮组样式 */
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+/* 统一输入字段样式（输入框和选择框） */
+.input-field {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+  margin: 0;
+  background-color: white;
+  cursor: pointer;
+  box-sizing: border-box;
+  min-height: 36px;
+  
+  &:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+  }
+  
+  /* 确保 select 元素与 input 元素高度一致 */
+  &[type="text"] {
+    height: 36px;
+  }
+}
+
+/* 统一按钮样式（下载和上传按钮） */
+.action-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #3498db;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  min-height: 36px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  
+  &:hover {
+    background-color: #2980b9;
+    transform: translateY(-1px);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+  
+  &:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+    transform: none;
+  }
+}

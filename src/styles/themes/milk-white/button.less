@@ -1,0 +1,15 @@
+/* 奶白色主题按钮样式 */
+.milk-white {
+  background: linear-gradient(145deg, @milk-white-light, @milk-white-dark);
+  border-color: @milk-white-border;
+  color: @dark-gray;
+  
+  &:hover {
+    background: linear-gradient(145deg, lighten(@milk-white-light, 5%), lighten(@milk-white-dark, 5%));
+    border-color: lighten(@milk-white-border, 10%);
+  }
+  
+  &.selected {
+    box-shadow: 0 0 0 2px fade(@milk-white-border, 50%);
+  }
+}

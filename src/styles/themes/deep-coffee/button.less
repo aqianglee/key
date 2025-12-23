@@ -1,0 +1,14 @@
+/* 深咖色主题按钮样式 */
+.deep-coffee {
+  background: linear-gradient(145deg, @deep-coffee-light, @deep-coffee-dark);
+  border-color: @deep-coffee-border;
+  
+  &:hover {
+    background: linear-gradient(145deg, lighten(@deep-coffee-light, 5%), lighten(@deep-coffee-dark, 5%));
+    border-color: lighten(@deep-coffee-border, 10%);
+  }
+  
+  &.selected {
+    box-shadow: 0 0 0 2px fade(@deep-coffee-border, 50%);
+  }
+}

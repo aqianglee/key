@@ -1,0 +1,122 @@
+/* 导入全局颜色常量 */
+@import '../../styles/global.less';
+
+/* 控制卡片样式已迁移到 ControlCard 组件 */
+/*
+.control-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 300px;
+  max-width: none;
+}
+*/
+
+/* 质感切换按钮样式 */
+.key-type-selector {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2d3748;
+    margin-right: 8px;
+  }
+}
+
+.type-btn {
+  padding: 6px 12px;
+  border: 2px solid #4a5568;
+  border-radius: 4px;
+  background-color: #f7fafc;
+  color: #2d3748;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 80px;
+  text-align: center;
+
+  &:hover {
+    background-color: #e2e8f0;
+    border-color: #2d3748;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  &.active {
+    background-color: #4a5568;
+    color: #ffffff;
+    border-color: #2d3748;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* 颜色按钮样式 */
+.color-btn {
+  padding: 6px 12px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  min-width: 50px;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  &.active {
+    border-color: white;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+    transform: translateY(-1px);
+  }
+}
+
+/* 导入各颜色按钮的具体样式 */
+@import '../../styles/themes/default/panel.less';
+@import '../../styles/themes/blue/panel.less';
+@import '../../styles/themes/green/panel.less';
+@import '../../styles/themes/red/panel.less';
+@import '../../styles/themes/orange/panel.less';
+@import '../../styles/themes/purple/panel.less';
+@import '../../styles/themes/navy/panel.less';
+@import '../../styles/themes/sky/panel.less';
+@import '../../styles/themes/matcha/panel.less';
+@import '../../styles/themes/light-matcha/panel.less';
+@import '../../styles/themes/sakura/panel.less';
+@import '../../styles/themes/champagne/panel.less';
+@import '../../styles/themes/lavender/panel.less';
+@import '../../styles/themes/obsidian/panel.less';
+@import '../../styles/themes/deep-coffee/panel.less';
+@import '../../styles/themes/light-coffee/panel.less';
+@import '../../styles/themes/milk-white/panel.less';
+
+/* 颜色选择器样式 */
+.panel-color-selector {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
