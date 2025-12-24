@@ -1,0 +1,1 @@
+import{c as s,j as e,R as t,B as r,K as a,D as o,a as n,b as c,H as d}from"./DefaultLayout-ff1f9018.js";s.createRoot(document.getElementById("root")).render(e.jsx(t.StrictMode,{children:e.jsx(r,{basename:"/key/",children:e.jsx(a,{children:e.jsx(o,{children:e.jsx(n,{children:e.jsx(c,{path:"/",element:e.jsx(d,{})})})})})})}));
