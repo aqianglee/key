@@ -1,0 +1,9 @@
+# Netlify重定向配置
+/keyboard-customize/* /key/keyboard-customize/index.html 200
+/keyboard-design/* /key/keyboard-design/index.html 200
+/test/* /key/test/index.html 200
+
+# 處理不帶斜杠的URL
+/keyboard-customize /key/keyboard-customize/index.html 200
+/keyboard-design /key/keyboard-design/index.html 200
+/test /key/test/index.html 200

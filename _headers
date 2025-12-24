@@ -1,0 +1,12 @@
+# Netlify頭部配置
+/keyboard-customize/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+
+/keyboard-design/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+
+/test/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
